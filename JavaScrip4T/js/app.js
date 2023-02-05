@@ -14,12 +14,40 @@ function operarSuma() {
 }
 function operarResta() {
     //
+    const uno = document.getElementById("uno");
+    const dos = document.getElementById("dos");
+
+    const resultado = document.getElementById("result");
+
+    let resta = 0;
+
+    resta = parseInt(uno.value) - parseInt(dos.value);
+    resultado.value = resta;
+
 }
 function operarMultiplicar() {
     //
+    const uno = document.getElementById("uno");
+    const dos = document.getElementById("dos");
+
+    const resultado = document.getElementById("result");
+
+    let mult = 0;
+
+    mult = parseInt(uno.value) * parseInt(dos.value);
+    resultado.value = mult;
 }
 function operarDividir() {
     //
+    const uno = document.getElementById("uno");
+    const dos = document.getElementById("dos");
+
+    const resultado = document.getElementById("result");
+
+    let div = 0;
+
+    div = parseInt(uno.value) / parseInt(dos.value);
+    resultado.value = div;
 }
 
 function validar() { // Ejemplo - Alert's and Promt's [alartifyjs.com]
