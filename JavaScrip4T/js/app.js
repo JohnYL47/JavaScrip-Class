@@ -1,52 +1,52 @@
 
 function operarSuma() {
     /* Inputs-Id */
-    const uno = document.getElementById("uno");
-    const dos = document.getElementById("dos");
+    const uno1 = document.getElementById("uno");
+    const dos2 = document.getElementById("dos");
     
-    const resultado = document.getElementById("result");
+    const resultado = document.getElementById("resultado");
 
     let suma = 0;
 
-    suma = parseInt(uno.value)  +  parseInt(dos.value);
+    suma = parseInt(uno1.value)  +  parseInt(dos2.value);
     resultado.value = suma;
 
 }
 function operarResta() {
     //
-    const uno = document.getElementById("uno");
-    const dos = document.getElementById("dos");
+    const uno1 = document.getElementById("uno");
+    const dos2 = document.getElementById("dos");
 
-    const resultado = document.getElementById("result");
+    const resultado = document.getElementById("resultado");
 
     let resta = 0;
 
-    resta = parseInt(uno.value) - parseInt(dos.value);
+    resta = parseInt(uno1.value) - parseInt(dos2.value);
     resultado.value = resta;
 
 }
 function operarMultiplicar() {
     //
-    const uno = document.getElementById("uno");
-    const dos = document.getElementById("dos");
+    const uno1 = document.getElementById("uno");
+    const dos2 = document.getElementById("dos");
 
-    const resultado = document.getElementById("result");
+    const resultado = document.getElementById("resultado");
 
     let mult = 0;
 
-    mult = parseInt(uno.value) * parseInt(dos.value);
+    mult = parseInt(uno1.value) * parseInt(dos2.value);
     resultado.value = mult;
 }
 function operarDividir() {
     //
-    const uno = document.getElementById("uno");
-    const dos = document.getElementById("dos");
+    const uno1 = document.getElementById("uno");
+    const dos2 = document.getElementById("dos");
 
-    const resultado = document.getElementById("result");
+    const resultado = document.getElementById("resultado");
 
     let div = 0;
 
-    div = parseInt(uno.value) / parseInt(dos.value);
+    div = parseInt(uno1.value) / parseInt(dos2.value);
     resultado.value = div;
 }
 
@@ -61,6 +61,46 @@ function validar() { // Ejemplo - Alert's and Promt's [alartifyjs.com]
         /*alert("Usted es mañor de edad");*/
         alertify.success('Usted es mayor de edad');
     }   
+}
+
+var row="";
+var filas = [];
+function add() {
+  const correo = document.getElementById('correo');
+  const descripcion = document.getElementById('descripcion');
+  
+  row += `<tr>
+              <th scope="row">${correo.value}</th>
+              <td>${descripcion.value}</td>
+            </tr>`;
+  filas.push(row);
+  //addr.innerHTML = row;
+  /*
+  row= `<tr class=${filas.length %2 == 0? "table-success": "table-danger"}>
+              <th scope="row">${correo.value}</th>
+              <td>${descripcion.value}</td>
+              <td><a class="btn btn-primary">actualizar</a></td>
+              <td><a class="btn btn-danger">Eliminar</a></td>
+            </tr>`;
+  filas.push(row);
+  //addr.innerHTML = row;*/
+}
+
+function leerarray(){
+  const add = document.getElementById('add');
+  
+  
+  /*filas.forEach(item => {
+
+    add.innerHTML = filas;
+    console.log(item);
+  });
+  */ 
+  for (let index = 0; index < filas.length; index++) {
+    add.innerHTML = filas[index];
+    console.log(filas);    
+  }
+ 
 }
 
 
