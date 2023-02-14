@@ -49,7 +49,6 @@ function operarDividir() {
     div = parseInt(uno1.value) / parseInt(dos2.value);
     resultado.value = div;
 }
-
 function validar() { // Ejemplo - Alert's and Promt's [alartifyjs.com]
     const inputEdad = document.getElementById("edad");
     let edad = inputEdad.value;
@@ -74,6 +73,7 @@ function add() {
               <td>${descripcion.value}</td>
             </tr>`;
   filas.push(row);
+
   //addr.innerHTML = row;
   /*
   row= `<tr class=${filas.length %2 == 0? "table-success": "table-danger"}>
@@ -88,24 +88,18 @@ function add() {
 
 function leerarray(){
   const add = document.getElementById('add');
-  
-  
+
+  for (let index = 0; index < filas.length; index++) {
+    add.innerHTML = filas[index];
+    console.log(filas);    
+  }  
   /*filas.forEach(item => {
 
     add.innerHTML = filas;
     console.log(item);
   });
   */ 
-  for (let index = 0; index < filas.length; index++) {
-    add.innerHTML = filas[index];
-    console.log(filas);    
-  }
- 
 }
-
-
-
-
 /*
 
 function Saludar(name) {
